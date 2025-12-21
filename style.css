@@ -1,0 +1,30 @@
+body{
+    background-color: rgb(82, 82, 82);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#var-container{
+    display: flex;
+    height: 50px;
+    width: 50px;
+}
+
+.clear{
+    width: 35px;
+}
+
+#button-container{
+    display: flex;
+}
+
+#number-container{
+    display: flex;
+    flex-direction: column;
+}
+
+#operations-container{
+    display: flex;
+    flex-direction: column;
+}
