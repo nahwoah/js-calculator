@@ -5,6 +5,14 @@ body{
     align-items: center;
 }
 
+#container{
+    outline: 2px solid red;
+    /* height: 200px;
+    width: 150px; */
+
+
+}
+
 #var-container{
     display: flex;
     height: 50px;
