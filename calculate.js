@@ -1,24 +1,4 @@
-// const zero = document.querySelector("#zero");
-// const one = document.querySelector("#one");
-// const two = document.querySelector("#two");
-// const three = document.querySelector("#three");
-// const four = document.querySelector("#four");
-// const five = document.querySelector("#five");
-// const six = document.querySelector("#six");
-// const seven = document.querySelector("#seven");
-// const eight = document.querySelector("#eight");
-// const nine = document.querySelector("#nine");
-// const division = document.querySelector("#division");
-// const multipplication = document.querySelector("#multipplication");
-// const subtraction = document.querySelector("#subtraction");
-// const addition = document.querySelector("#addition");
-// const equal = document.querySelector("#equal");
-// const clear = document.querySelector("#clear");
-// const deletion = document.querySelector("#deletion");
-
-
 const variable1 = document.querySelector("#variable1")
-
 const btn = document.querySelector(".buttons");
 
 
