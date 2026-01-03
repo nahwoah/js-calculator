@@ -15,6 +15,7 @@ mode = {
     multiply: false,
     divide: false,
     operation: false,
+    cleaned: false,
 }
 
 btn.addEventListener("click", (event) => {
@@ -70,7 +71,14 @@ btn.addEventListener("click", (event) => {
                     vars.var1 += '1';
                     variable1.textContent = vars.var1;
                 }
-            } else{
+            } else if(mode.add == true || mode.subtract == true || mode.divide == true || mode.multiply ==true){
+                if(mode.cleaned == false){
+                    vars.var2 = '';
+                    mode.cleaned = true;
+                }
+                vars.var2 += '1';
+                variable1.innerHTML = vars.var2;
+            }else{
                 if (vars.var2 == '' || vars.var2 == '0'){
                     vars.var2 = vars.var2.slice(0, -1);
                     vars.var2 += '1';
@@ -99,7 +107,14 @@ btn.addEventListener("click", (event) => {
                     vars.var1 += '2';
                     variable1.textContent = vars.var1;
                 }
-            } else{
+            } else if(mode.add == true || mode.subtract == true || mode.divide == true || mode.multiply ==true){
+                if(mode.cleaned == false){
+                    vars.var2 = '';
+                    mode.cleaned = true;
+                }
+                vars.var2 += '2';
+                variable1.innerHTML = vars.var2;
+            }else{
                 if (vars.var2 == '' || vars.var2 == '0'){
                     vars.var2 = vars.var2.slice(0, -1);
                     vars.var2 += '2';
@@ -128,7 +143,14 @@ btn.addEventListener("click", (event) => {
                     vars.var1 += '3';
                     variable1.textContent = vars.var1;
                 }
-            } else{
+            } else if(mode.add == true || mode.subtract == true || mode.divide == true || mode.multiply ==true){
+                if(mode.cleaned == false){
+                    vars.var2 = '';
+                    mode.cleaned = true;
+                }
+                vars.var2 += '3';
+                variable1.innerHTML = vars.var2;
+            }else{
                 if (vars.var2 == '' || vars.var2 == '0'){
                     vars.var2 = vars.var2.slice(0, -1);
                     vars.var2 += '3';
@@ -157,7 +179,14 @@ btn.addEventListener("click", (event) => {
                     vars.var1 += '4';
                     variable1.textContent = vars.var1;
                 }
-            } else{
+            } else if(mode.add == true || mode.subtract == true || mode.divide == true || mode.multiply ==true){
+                if(mode.cleaned == false){
+                    vars.var2 = '';
+                    mode.cleaned = true;
+                }
+                vars.var2 += '4';
+                variable1.innerHTML = vars.var2;
+            }else{
                 if (vars.var2 == '' || vars.var2 == '0'){
                     vars.var2 = vars.var2.slice(0, -1);
                     vars.var2 += '4';
@@ -186,7 +215,14 @@ btn.addEventListener("click", (event) => {
                     vars.var1 += '5';
                     variable1.textContent = vars.var1;
                 }
-            } else{
+            } else if(mode.add == true || mode.subtract == true || mode.divide == true || mode.multiply ==true){
+                if(mode.cleaned == false){
+                    vars.var2 = '';
+                    mode.cleaned = true;
+                }
+                vars.var2 += '5';
+                variable1.innerHTML = vars.var2;
+            }else{
                 if (vars.var2 == '' || vars.var2 == '0'){
                     vars.var2 = vars.var2.slice(0, -1);
                     vars.var2 += '5';
@@ -215,7 +251,14 @@ btn.addEventListener("click", (event) => {
                     vars.var1 += '6';
                     variable1.textContent = vars.var1;
                 }
-            } else{
+            } else if(mode.add == true || mode.subtract == true || mode.divide == true || mode.multiply ==true){
+                if(mode.cleaned == false){
+                    vars.var2 = '';
+                    mode.cleaned = true;
+                }
+                vars.var2 += '6';
+                variable1.innerHTML = vars.var2;
+            }else{
                 if (vars.var2 == '' || vars.var2 == '0'){
                     vars.var2 = vars.var2.slice(0, -1);
                     vars.var2 += '6';
@@ -244,7 +287,14 @@ btn.addEventListener("click", (event) => {
                     vars.var1 += '7';
                     variable1.textContent = vars.var1;
                 }
-            } else{
+            } else if(mode.add == true || mode.subtract == true || mode.divide == true || mode.multiply ==true){
+                if(mode.cleaned == false){
+                    vars.var2 = '';
+                    mode.cleaned = true;
+                }
+                vars.var2 += '7';
+                variable1.innerHTML = vars.var2;
+            }else{
                 if (vars.var2 == '' || vars.var2 == '0'){
                     vars.var2 = vars.var2.slice(0, -1);
                     vars.var2 += '7';
@@ -273,7 +323,14 @@ btn.addEventListener("click", (event) => {
                     vars.var1 += '8';
                     variable1.textContent = vars.var1;
                 }
-            } else{
+            } else if(mode.add == true || mode.subtract == true || mode.divide == true || mode.multiply ==true){
+                if(mode.cleaned == false){
+                    vars.var2 = '';
+                    mode.cleaned = true;
+                }
+                vars.var2 += '8';
+                variable1.innerHTML = vars.var2;
+            }else{
                 if (vars.var2 == '' || vars.var2 == '0'){
                     vars.var2 = vars.var2.slice(0, -1);
                     vars.var2 += '8';
@@ -302,7 +359,14 @@ btn.addEventListener("click", (event) => {
                     vars.var1 += '9';
                     variable1.textContent = vars.var1;
                 }
-            } else{
+            } else if(mode.add == true || mode.subtract == true || mode.divide == true || mode.multiply ==true){
+                if(mode.cleaned == false){
+                    vars.var2 = '';
+                    mode.cleaned = true;
+                }
+                vars.var2 += '9';
+                variable1.innerHTML = vars.var2;
+            }else{
                 if (vars.var2 == '' || vars.var2 == '0'){
                     vars.var2 = vars.var2.slice(0, -1);
                     vars.var2 += '9';
@@ -370,37 +434,109 @@ btn.addEventListener("click", (event) => {
             }
             break;
         case 'division':
+            if(mode.add = true){
+                
+                result = Number(vars.var1) + Number(vars.var2);
+                vars.var1 = result
+                variable1.textContent = result;
+                mode.operation = true;
+            } else if(mode.multiply == true){
+                result = Number(vars.var1) * Number(vars.var2);
+                vars.var1 = result
+                variable1.textContent = result;
+                mode.operation = true;
+            } else if(mode.subtract == true){
+                result = Number(vars.var1) - Number(vars.var2);
+                vars.var1 = result
+                variable1.textContent = result;
+                mode.operation = true;
+            }
             mode.var1 = false;
                 
             mode.add = false;
             mode.subtract = false;
             mode.multiply = false;
             mode.divide = true;
+            mode.cleaned = false;
             break;
         case 'multipplication':
+            if(mode.add = true){
+                
+                result = Number(vars.var1) + Number(vars.var2);
+                vars.var1 = result
+                variable1.textContent = result;
+                mode.operation = true;
+            } else if(mode.subtract == true){
+                result = Number(vars.var1) - Number(vars.var2);
+                vars.var1 = result
+                variable1.textContent = result;
+                mode.operation = true;
+            } else if(mode.divide == true){
+                result = Number(vars.var1) / Number(vars.var2);
+                vars.var1 = result
+                variable1.textContent = result;
+                mode.operation = true;
+            }
             mode.var1 = false;
                 
             mode.add = false;
             mode.subtract = false;
             mode.multiply = true;
             mode.divide = false;
+            mode.cleaned = false;
             break;
         case 'subtraction':
+            if(mode.add = true){
+                
+                result = Number(vars.var1) + Number(vars.var2);
+                vars.var1 = result
+                variable1.textContent = result;
+                //mode.operation = true;
+            } else if(mode.multiply == true){
+                result = Number(vars.var1) * Number(vars.var2);
+                vars.var1 = result
+                variable1.textContent = result;
+                //mode.operation = true;
+            } else if(mode.divide == true){
+                result = Number(vars.var1) / Number(vars.var2);
+                vars.var1 = result
+                variable1.textContent = result;
+                //mode.operation = true;
+            }
+            
             mode.var1 = false;
                 
             mode.add = false;
             mode.subtract = true;
             mode.multiply = false;
             mode.divide = false;
+            mode.cleaned = false;
             break;
         case 'addition':
+            if(mode.subtract = true){
+                
+                result = Number(vars.var1) - Number(vars.var2);
+                vars.var1 = result
+                variable1.textContent = result;
+                //mode.operation = true;
+            } else if(mode.multiply == true){
+                result = Number(vars.var1) * Number(vars.var2);
+                vars.var1 = result
+                variable1.textContent = result;
+                //mode.operation = true;
+            } else if(mode.divide == true){
+                result = Number(vars.var1) / Number(vars.var2);
+                vars.var1 = result
+                variable1.textContent = result;
+                //mode.operation = true;
+            }
             mode.var1 = false;
                 
             mode.add = true;
             mode.subtract = false;
             mode.multiply = false;
             mode.divide = false;
-
+            mode.cleaned = false;
             break;
         case 'equal':
             if (mode.add == true){
