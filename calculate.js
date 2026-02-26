@@ -424,7 +424,7 @@ btn.addEventListener("click", (event) => {
             mode.divide = false;
             break;
         case 'deletion':
-            if (mode.var1 = true){
+            if (mode.var1 === true){
                 vars.var1 = vars.var1.slice(0, -1);
                 variable1.innerHTML = vars.var1;
 
@@ -1002,7 +1002,7 @@ function logKey(e) {
             mode.divide = false;
             break;
         case 'Backspace':
-            if (mode.var1 = true){
+            if (mode.var1 === true){
                 vars.var1 = vars.var1.slice(0, -1);
                 variable1.innerHTML = vars.var1;
 
